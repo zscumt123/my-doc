@@ -1,0 +1,17 @@
+{
+  "name": "my-doc",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "zs",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.20",
+    "vue": "^3.2.40"
+  }
+}
