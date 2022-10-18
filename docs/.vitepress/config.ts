@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/my-doc/',
   title: '个人文档',
   description: '个人学习过程中的笔记',
   lastUpdated: true,
