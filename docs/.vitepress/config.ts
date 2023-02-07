@@ -1,47 +1,44 @@
 import { defineConfig } from 'vitepress'
+import { catalog as http2Catalog } from '../http2/config/catalog'
+import { catalog as IntroductionCatalog } from '../introduction/config/catalog'
 
 import {DefaultTheme} from 'vitepress/theme'
 type SideBar = DefaultTheme.Sidebar
 
+
 const sidebar: SideBar = [
-  {
-    text: '前端',
+  IntroductionCatalog,
+  { 
+    text: 'Nuxtjs入门',
+    link:'/nuxt/',
+    collapsed: true,
     items: [
-      { 
-        text: 'Nuxtjs入门',
-        link:'/nuxt/',
-        collapsed: true,
-        items: [
-          { text: '快速开始', link: '/nuxt/start' },
-          { text: '目录结构和别名', link: '/nuxt/dir-structure' },
-          { text: '入口文件和路由', link: '/nuxt/router' },
-          { text: '路由中间件', link: '/nuxt/router-middleware' },
-          { text: '组件', link: '/nuxt/components' },
-          { text: '布局', link: '/nuxt/layout' },
-          { text: '组合式逻辑与状态管理', link: '/nuxt/composables' },
-          { text: '自定义配置', link: '/nuxt/config' },
-          { text: '插件', link: '/nuxt/plugins' },
-          { text: '服务端', link: '/nuxt/server' },
-        ]
-       },
-      // { text: 'Vue', link: '/item-b' }
+      { text: '快速开始', link: '/nuxt/start' },
+      { text: '目录结构和别名', link: '/nuxt/dir-structure' },
+      { text: '入口文件和路由', link: '/nuxt/router' },
+      { text: '路由中间件', link: '/nuxt/router-middleware' },
+      { text: '组件', link: '/nuxt/components' },
+      { text: '布局', link: '/nuxt/layout' },
+      { text: '组合式逻辑与状态管理', link: '/nuxt/composables' },
+      { text: '自定义配置', link: '/nuxt/config' },
+      { text: '插件', link: '/nuxt/plugins' },
+      { text: '服务端', link: '/nuxt/server' },
     ]
-  },
-  // {
-  //   text: '后端',
-  //   items: [
-  //     { 
-  //       text: '数据库',
-  //       link: '/mysql/',
-  //       items: [
-  //         { text: '锁', link: '/mysql/lock' }
-  //       ]
-  //     }
-  //   ]
-  // }
+   },
+  http2Catalog
 ]
 
-
+const nav: DefaultTheme.NavItem[] =  [
+  {
+    text: '文档目录',
+    items: [
+      {
+        text: 'nuxt',
+        link: '/nuxt/'
+      }
+    ]
+  },
+];
 
 export default defineConfig({
   vite: {
@@ -64,35 +61,7 @@ export default defineConfig({
     socialLinks:[
       { icon: 'github', link: 'https://github.com/zscumt123' }
     ],
-    nav: [
-      { text: 'Guide', link: '/guide' },
-      {
-        text: 'Dropdown Menu',
-        items: [
-          {
-            // Title for the section.
-            text: 'Section A Title',
-            items: [
-              { text: 'Section A Item A', link: '...' },
-              { text: 'Section B Item B', link: '...' }
-            ]
-          }
-        ]
-      },
-      {
-        text: 'Dropdown Menu',
-        items: [
-          {
-            // You may also omit the title.
-            items: [
-              { text: 'Section A Item A', link: '...' },
-              { text: 'Section B Item B', link: '...' }
-            ]
-          }
-        ]
-      }
-    ],
-    sidebar
-
+    nav,
+    sidebar,
   }
 })
