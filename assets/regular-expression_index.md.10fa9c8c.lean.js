@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r}from"./app.d9f47a6c.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"regular-expression/index.md","lastUpdated":1676856338000}'),a={name:"regular-expression/index.md"};function s(n,o,c,d,i,p){return r(),t("div")}const m=e(a,[["render",s]]);export{l as __pageData,m as default};
