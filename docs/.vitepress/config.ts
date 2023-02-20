@@ -1,13 +1,15 @@
 import { defineConfig } from 'vitepress'
 import { catalog as http2Catalog } from '../http2/config/catalog'
-import { catalog as IntroductionCatalog } from '../introduction/config/catalog'
+import { catalog as introductionCatalog } from '../introduction/config/catalog'
+import {  catalog as manualCatalog} from '../js-manual/config/catalog'
+import { catalog as RegularCatalog } from '../regular-expression/config/catelog'
 
 import {DefaultTheme} from 'vitepress/theme'
 type SideBar = DefaultTheme.Sidebar
 
 
 const sidebar: SideBar = [
-  IntroductionCatalog,
+  introductionCatalog,
   { 
     text: 'Nuxtjs入门',
     link:'/nuxt/',
@@ -25,7 +27,9 @@ const sidebar: SideBar = [
       { text: '服务端', link: '/nuxt/server' },
     ]
    },
-  http2Catalog
+  http2Catalog,
+  manualCatalog,
+  RegularCatalog
 ]
 
 const nav: DefaultTheme.NavItem[] =  [
