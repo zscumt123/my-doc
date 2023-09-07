@@ -3,7 +3,7 @@ import { catalog as http2Catalog } from '../http2/config/catalog'
 import { catalog as introductionCatalog } from '../introduction/config/catalog'
 import {  catalog as manualCatalog} from '../js-manual/config/catalog'
 import { catalog as RegularCatalog } from '../regular-expression/config/catelog'
-
+import {catalog as webpackCatalog} from '../webpack/config/catelog'
 import {DefaultTheme} from 'vitepress/theme'
 type SideBar = DefaultTheme.Sidebar
 
@@ -29,7 +29,8 @@ const sidebar: SideBar = [
    },
   http2Catalog,
   manualCatalog,
-  RegularCatalog
+  RegularCatalog,
+  webpackCatalog
 ]
 
 const nav: DefaultTheme.NavItem[] =  [

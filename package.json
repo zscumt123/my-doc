@@ -1,5 +1,6 @@
 {
   "name": "my-doc",
+  "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -11,7 +12,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "vitepress": "^1.0.0-alpha.45",
-    "vue": "^3.2.40"
+    "vitepress": "^1.0.0-rc.10",
+    "vue": "^3.3.4"
   }
 }
