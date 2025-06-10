@@ -5,6 +5,7 @@ import {  catalog as manualCatalog} from '../js-manual/config/catalog'
 import { catalog as RegularCatalog } from '../regular-expression/config/catelog'
 import {catalog as webpackCatalog} from '../webpack/config/catelog'
 import { catalog as VueCatalog } from '../vue/config/catalog'
+import { catalog as promptCatalog } from '../prompt/config/catalog'
 import {DefaultTheme} from 'vitepress/theme'
 type SideBar = DefaultTheme.Sidebar
 
@@ -32,7 +33,8 @@ const sidebar: SideBar = [
   manualCatalog,
   RegularCatalog,
   webpackCatalog,
-  VueCatalog
+  VueCatalog,
+  promptCatalog
 ]
 
 const nav: DefaultTheme.NavItem[] =  [
